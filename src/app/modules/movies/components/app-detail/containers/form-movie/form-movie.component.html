@@ -1,0 +1,49 @@
+<form [formGroup]="movieForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="title"> Title *</label>
+    <input
+      id="title"
+      class="form-control"
+      type="text"
+      formControlName="title"
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="description"> Description * </label>
+    <input
+      id="description"
+      class="form-control"
+      type="text"
+      formControlName="description"
+    />
+  </div>
+  <div class="form-group">
+    <label for="cover_url"> Cover url </label>
+    <input
+      id="cover_url"
+      class="form-control"
+      type="text"
+      formControlName="cover_url"
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="vote_average"> Vote average </label>
+    <input
+      id="vote_average"
+      class="form-control"
+      type="text"
+      formControlName="vote_average"
+    />
+  </div>
+  <p class="text-center">
+    <button
+      type="submit"
+      class="btn btn-primary"
+      [disabled]="movieForm.status !== 'VALID'"
+    >
+      Submit
+    </button>
+  </p>
+</form>

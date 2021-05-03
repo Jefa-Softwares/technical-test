@@ -1,0 +1,41 @@
+<div class="movie-detail-container">
+  <h2>
+    {{ data.title }}
+    <span>({{ data.release_date | date: "YYYY" }})</span>
+  </h2>
+  <p>
+    {{ data.release_date }} • {{ genresTrasnform.join(",") }} •
+    {{ (data.runtime / 60).toFixed(2) }} h
+  </p>
+  <div class="actions">
+    <div class="rating">
+      <div class="circle_icon big">
+        <p>{{ data.vote_average * 10 }}%</p>
+      </div>
+    </div>
+    <div class="circle_icon"><i class="bi bi-list-ul"></i></div>
+    <div class="circle_icon"><i class="bi bi-heart-fill"></i></div>
+    <div class="circle_icon"><i class="bi bi-bookmark-fill"></i></div>
+    <div class="circle_icon"><i class="bi bi-star-fill"></i></div>
+  </div>
+  <p></p>
+  <p class="tagline">
+    <i>{{ data.tagline }}</i>
+  </p>
+  <strong> Overview </strong>
+  <p>{{ data.overview }}</p>
+  <div class="row producers">
+    <div class="col-sm-6">
+      <p>
+        <strong>{{ genresTrasnform.join(",") }}</strong>
+      </p>
+      <p>Producers</p>
+    </div>
+    <div class="col-sm-6">
+      <p>
+        <strong>{{ genresTrasnform.join(",") }}</strong>
+      </p>
+      <p>Producer Countries</p>
+    </div>
+  </div>
+</div>

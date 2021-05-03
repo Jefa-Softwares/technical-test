@@ -1,0 +1,40 @@
+.movie-detail-container {
+  margin-top: 5%;
+  h2 {
+    span {
+      color: #4b4a4a;
+    }
+  }
+
+  .producers {
+    p {
+      margin: 0px;
+    }
+  }
+  .actions {
+    display: flex;
+    align-items: center;
+    .circle_icon {
+      cursor: pointer;
+      margin: 5px;
+      font-size: 10px;
+      background-color: #032541;
+      color: white;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      text-align: center;
+      padding-top: 12px;
+      &.big {
+        padding-top: 19px;
+        font-size: 15px;
+        width: 60px;
+        height: 60px;
+        font-weight: bold;
+      }
+    }
+  }
+  .tagline {
+    color: gray;
+  }
+}
