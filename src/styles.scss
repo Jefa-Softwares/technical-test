@@ -1,0 +1,14 @@
+/* Import custom font */
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+/* Import custom scss */
+@import "app/styles/variables";
+/* global styles */
+body,
+html {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Roboto";
+}
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css");
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/scss/bootstrap";

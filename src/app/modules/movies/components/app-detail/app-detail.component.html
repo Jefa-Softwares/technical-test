@@ -1,0 +1,32 @@
+<div class="container_movie" *ngIf="(this.movie$ | async).movieLoaded">
+  <div
+    class="bg"
+    [ngStyle]="{
+      'background-image':
+        'url(' + baseUrl + (this.movie$ | async).movieDetail.backdrop_path + ')'
+    }"
+  ></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <app-image-container
+          [image]="(this.movie$ | async).movieDetail.poster_path"
+        ></app-image-container>
+      </div>
+      <div class="col-sm-8">
+        <app-movie-detail
+          [data]="(this.movie$ | async).movieDetail"
+        ></app-movie-detail>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row row justify-content-md-center">
+    <div class="col-sm-4">
+      <app-form-movie
+        [movie]="(this.movie$ | async).movieDetail"
+      ></app-form-movie>
+    </div>
+  </div>
+</div>
